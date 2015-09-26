@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/Fermium-co/jspm-typescript-sample",
   "jspm": {
-    "dependencies": {},
+    "dependencies": {
+      "ts": "github:frankwallis/plugin-typescript@^2.0.17"
+    },
     "devDependencies": {}
   }
 }
