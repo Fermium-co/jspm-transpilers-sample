@@ -10,7 +10,7 @@ Use JSPM plugins for transpilition, why & how?
 
 Almost all of these facilities are transpiling something to some other thing.
 
-Development using these facilities are recommended, but using them with jspm adds several extra benefits:
+Development using these facilities is recommended, but using them with jspm adds several extra benefits:
 
 1-	You don't have to provide IDE & task based configuration for every IDE and task runner you use in your team. VSCode has its own tsconfig.json for Typescript, Web storm has its own, Visual Studio etc.
 
@@ -18,7 +18,7 @@ Development using these facilities are recommended, but using them with jspm add
 
 3- This is a unique approach for all your transpilition needs. It can also gives you a production ready results too.
 
-4- Using JSPM, you've a standard ECMA based module loader, which is compatible with previews module loaders like require js too. 
+4- Using JSPM, you've a modern ECMA based standard module loader, which is compatible with previews module loaders like require js too. 
 
 Note that this won't remove Typescript type safety error messages from your project, as far as I tested on VS Code, Visual Studio and Web Storms.
 
@@ -31,7 +31,7 @@ So, let’s start!
 1.	Run “npm install jspm -g” to install JSPM CLI globally.
 2.	Run “npm install jspm --save” to install JSPM locally.
 3.	Run “jspm init” Accept all default values, and choose typescript as a transpiler.
-4.	Run “jspm install ts” to add Typescript as a transpiler by JSPM.
+4.	Run “jspm install ts” to add JSPM Typescript plugin.
 5.	Create a src folder and put index.ts into that. Then write these configs in your config.js file:
 
 ```json
@@ -42,7 +42,8 @@ typescriptOptions: {
     "module": "system",
     "emitDecoratorMetadata": true,
     "experimentalAsyncFunctions": true,
-    "taget": "ES5"
+    "taget": "ES5",
+    "sourceMap": true
   },
   packages: {
     "src": { /* src folder */
@@ -96,3 +97,5 @@ Then use 'production.js' file in index.html, instead of all those previews files
 It has no dependency to any library, transpiler etc. and it is ECMA 5 based JavaScript file!
 
 You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.
+
+[Dedicated blog post about this repository, so you can write a comment there](http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-“jspm-transpilers-sample”)
