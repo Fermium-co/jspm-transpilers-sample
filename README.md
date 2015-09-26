@@ -24,7 +24,7 @@ Note that this won't remove Typescript type safty error messages from your proje
 
 # How?
 
-I’m going to use JSPM typescript plugin as an example, thanks to (frankwallis’s Git Hub project)[https://github.com/frankwallis/plugin-typescript].
+I’m going to use JSPM typescript plugin as an example, thanks to [frankwallis’s Git Hub project.](https://github.com/frankwallis/plugin-typescript)
 
 So, let’s start!
 
