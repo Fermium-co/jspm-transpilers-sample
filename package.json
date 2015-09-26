@@ -1,7 +1,7 @@
 {
-  "name": "jspm-typescript-sample",
+  "name": "jspm-transpilers-sample",
   "version": "1.0.0",
-  "description": "This sample demonstrates usage of Typescript as a transpiler using jspm & its ts plugin.",
+  "description": "This sample demonstrates usage of JSPM transpilers",
   "main": "index.ts",
   "dependencies": {
     "jspm": "^0.16.10"
@@ -9,7 +9,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Fermium-co/jspm-typescript-sample.git"
+    "url": "https://github.com/Fermium-co/jspm-transpilers-sample.git"
   },
   "keywords": [
     "jspm",
@@ -18,9 +18,9 @@
   "author": "Fermium",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Fermium-co/jspm-typescript-sample/issues"
+    "url": "https://github.com/Fermium-co/jspm-transpilers-sample/issues"
   },
-  "homepage": "https://github.com/Fermium-co/jspm-typescript-sample",
+  "homepage": "https://github.com/Fermium-co/jspm-transpilers-sample",
   "jspm": {
     "dependencies": {
       "ts": "github:frankwallis/plugin-typescript@^2.0.17"
