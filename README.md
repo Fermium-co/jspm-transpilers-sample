@@ -77,7 +77,7 @@ To transpile ECMA 6 & 7 based JavaScript files:
 ```json
 
     "ecmaSrc": { /* ecmaSrc folder */
-      "main": "index", /* index.js file inside src folder */
+      "main": "index", /* index.js file inside ecmaSrc folder */
       "defaultExtension": "js", /* .js for JavaScript files */
       "meta": {
         "*.js": {
