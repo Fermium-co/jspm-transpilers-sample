@@ -47,7 +47,7 @@ typescriptOptions: {
   packages: {
     "src": { /* src folder */
       "main": "index", /* index.ts file inside src folder */
-      "defaultExtension": "ts",
+      "defaultExtension": "ts", /* .ts for Typescript files */
       "meta": {
         "*.ts": {
           "loader": "ts"
@@ -66,6 +66,26 @@ typescriptOptions: {
 	</script>
 ```
 7.	Run your app!
+
+To transpile ECMA 6 & 7 based JavaScript files:
+
+1. Create a new folder, for example 'ecmaSrc'
+
+2. Add following package into config.js:
+
+```json
+
+    "ecmaSrc": { /* ecmaSrc folder */
+      "main": "index", /* index.js file inside src folder */
+      "defaultExtension": "js", /* .js for JavaScript files */
+      "meta": {
+        "*.js": {
+          "loader": "ts"
+        }
+      }
+    }
+
+```
 
 **Production:**
 
