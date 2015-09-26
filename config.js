@@ -9,7 +9,8 @@ System.config({
     "module": "system",
     "emitDecoratorMetadata": true,
     "experimentalAsyncFunctions": true,
-    "taget": "ES5"
+    "taget": "ES5",
+    "sourceMap": true
   },
   paths: {
     "github:*": "jspm_packages/github/*",

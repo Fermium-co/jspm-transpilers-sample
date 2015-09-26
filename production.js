@@ -447,11 +447,28 @@
 (['1'], [], function($__System) {
 
 (function(__moduleName) {
-  $__System.register("1", [], function(exports_1) {
+  $__System.register("2", [], function(exports_1) {
+    var msg;
     return {
       setters: [],
       execute: function() {
-        alert('jspm-typescript-sample');
+        debugger;
+        var msg = 'This is a ECMA 6 based JavaScript file';
+        alert(msg);
+      }
+    };
+  });
+})("file:///D:/y.moradi/SourceCodes/jspm-typescript-sample/ecmaSrc/index.js");
+
+(function(__moduleName) {
+  $__System.register("1", ["2"], function(exports_1) {
+    var msg;
+    return {
+      setters: [function(_1) {}],
+      execute: function() {
+        debugger;
+        msg = 'This is a Typescript file';
+        alert(msg);
       }
     };
   });
@@ -461,4 +478,4 @@
 (function(factory) {
   factory();
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=production.js.map

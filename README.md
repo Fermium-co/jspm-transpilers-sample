@@ -89,10 +89,10 @@ To transpile ECMA 6 & 7 based JavaScript files:
 
 **Production:**
 
-Run "jspm bundle-sfx src src/index.js"
+Run "jspm bundle-sfx src production.js"
 
-Then use 'src/index.js' file instead of all those previews files.
+Then use 'production.js' file in index.html, instead of all those previews files.
 
 It has no dependency to any library, transpiler etc. and it is ECMA 5 based JavaScript file!
 
-You don't have to deploy your typescript file into production too, and using source map, there is debug option available to you, so you can debug your original typescript codes using chrome etc.
+You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.
