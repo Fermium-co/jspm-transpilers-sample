@@ -16,11 +16,11 @@ Development using these facilities are recommended, but using them with jspm add
 
 2-	If you’ve some ECMA 6 & 7 based JavaScript files, you’ve to configure something like babel as a transpiler, while you can handle them using Typescript as a transpiler with JSPM.
 
-3- This is a unique approach for all your transpilition needs. It can also gives you a production ready results eitehr.
+3- This is a unique approach for all your transpilition needs. It can also gives you a production ready results too.
 
-4- Using JSPM, you've a standrad ECMA based module loader, which is compatible with previews module loaders like requre js too. 
+4- Using JSPM, you've a standard ECMA based module loader, which is compatible with previews module loaders like require js too. 
 
-Note that this won't remove Typescript type safty error messages from your project, as far as I tested on VS Code, Visual Studio and Web Storms.
+Note that this won't remove Typescript type safety error messages from your project, as far as I tested on VS Code, Visual Studio and Web Storms.
 
 # How?
 
@@ -95,4 +95,4 @@ Then use 'src/index.js' file instead of all those previews files.
 
 It has no dependency to any library, transpiler etc. and it is ECMA 5 based JavaScript file!
 
-You don't have to deploy your typescript file into production either, and using source map, there is debug option availble to you, so you can debug your original typescript codes using chrome etc.
+You don't have to deploy your typescript file into production too, and using source map, there is debug option available to you, so you can debug your original typescript codes using chrome etc.
