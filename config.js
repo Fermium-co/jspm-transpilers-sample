@@ -25,6 +25,15 @@ System.config({
           "loader": "ts"
         }
       }
+    },
+    "ecmaSrc": {
+      "main": "index",
+      "defaultExtension": "js",
+      "meta": {
+        "*.js": {
+          "loader": "ts"
+        }
+      }
     }
   },
 
