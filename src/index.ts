@@ -1,0 +1,1 @@
+alert('jspm-typescript-sample');
