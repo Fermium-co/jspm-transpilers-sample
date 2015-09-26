@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Jspm-transpilers-sample by Fermium-co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Jspm-transpilers-sample</h1>
+      <h2 class="project-tagline">This sample demonstrates usage &amp; advantages of JSPM transpilers</h2>
+      <a href="https://github.com/Fermium-co/jspm-transpilers-sample" class="btn">View on GitHub</a>
+      <a href="https://github.com/Fermium-co/jspm-transpilers-sample/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Fermium-co/jspm-transpilers-sample/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>Use JSPM plugins for transpilition, why &amp; how?</p>
+
+<h1>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h1>
+
+<p>'Typescript' is a super set of 'JavaScript'. It has several advantages than 'JavaScript', which are described on the web.</p>
+
+<p>'Less' is a super set of 'CSS'. It has several advantages than 'CSS' which are described on the web.</p>
+
+<p>'X' is a super set of 'Y'. It has several advantages than 'Y' which are described on the web.</p>
+
+<p>Almost all of these facilities are transpiling something to some other thing.</p>
+
+<p>Development using these facilities is recommended, but using them with jspm adds several extra benefits:</p>
+
+<p>1-  You don't have to provide IDE &amp; task based configuration for every IDE and task runner you use in your team. VSCode has its own tsconfig.json for Typescript, Web storm has its own, Visual Studio etc.</p>
+
+<p>2-  If you’ve some ECMA 6 &amp; 7 based JavaScript files, you’ve to configure something like babel as a transpiler, while you can handle them using Typescript as a transpiler with JSPM.</p>
+
+<p>3- This is a unique approach for all your transpilition needs. It can also gives you a production ready results too.</p>
+
+<p>4- Using JSPM, you've a modern ECMA based standard module loader, which is compatible with previews module loaders like require js too. </p>
+
+<p>Note that this won't remove Typescript type safety error messages from your project, as far as I tested on VS Code, Visual Studio and Web Storms.</p>
+
+<h1>
+<a id="how" class="anchor" href="#how" aria-hidden="true"><span class="octicon octicon-link"></span></a>How?</h1>
+
+<p>I’m going to use JSPM typescript plugin as an example, thanks to <a href="https://github.com/frankwallis/plugin-typescript">frankwallis’s Git Hub project.</a></p>
+
+<p>So, let’s start!</p>
+
+<ol>
+<li> Run “npm install jspm -g” to install JSPM CLI globally.</li>
+<li> Run “npm install jspm --save” to install JSPM locally.</li>
+<li> Run “jspm init” Accept all default values, and choose typescript as a transpiler.</li>
+<li> Run “jspm install ts” to add JSPM Typescript plugin.</li>
+<li> Create a src folder and put index.ts into that. Then write these configs in your config.js file:</li>
+</ol>
+
+<div class="highlight highlight-source-json"><pre>typescriptOptions: {
+    <span class="pl-s"><span class="pl-pds">"</span>noImplicitAny<span class="pl-pds">"</span></span>: <span class="pl-c1">false</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>typeCheck<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>experimentalDecorators<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>module<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>system<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>emitDecoratorMetadata<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>experimentalAsyncFunctions<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>taget<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ES5<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>sourceMap<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>
+  },
+  packages: {
+    <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>: { <span class="pl-ii">/*</span> <span class="pl-ii">src</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">index.ts</span> <span class="pl-ii">file</span> <span class="pl-ii">inside</span> <span class="pl-ii">src</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>defaultExtension<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">.ts</span> <span class="pl-ii">for</span> <span class="pl-ii">Typescript</span> <span class="pl-ii">files</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>meta<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>*.ts<span class="pl-pds">"</span></span>: {
+          <span class="pl-s"><span class="pl-pds">"</span>loader<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>
+        }
+      }
+    }
+  },</pre></div>
+
+<ol>
+<li> Add an index.html, and then write these scripts in that:</li>
+</ol>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">&lt;</span>script src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>/jspm_packages/system.src.js<span class="pl-pds">'</span></span><span class="pl-k">&gt;&lt;/</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>config.js<span class="pl-pds">'</span></span><span class="pl-k">&gt;&lt;/</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+        System.import(<span class="pl-s"><span class="pl-pds">'</span>src<span class="pl-pds">'</span></span> <span class="pl-c">/* src folder */</span>);
+    <span class="pl-k">&lt;/</span>script<span class="pl-k">&gt;</span></pre></div>
+
+<ol>
+<li> Run your app!</li>
+</ol>
+
+<p>To transpile ECMA 6 &amp; 7 based JavaScript files:</p>
+
+<ol>
+<li><p>Create a new folder, for example 'ecmaSrc'</p></li>
+<li><p>Add following package into config.js:</p></li>
+</ol>
+
+<div class="highlight highlight-source-json"><pre>
+    <span class="pl-s"><span class="pl-pds">"</span>ecmaSrc<span class="pl-pds">"</span></span>: { <span class="pl-ii">/*</span> <span class="pl-ii">ecmaSrc</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">index.js</span> <span class="pl-ii">file</span> <span class="pl-ii">inside</span> <span class="pl-ii">src</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>defaultExtension<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>js<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">.js</span> <span class="pl-ii">for</span> <span class="pl-ii">JavaScript</span> <span class="pl-ii">files</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>meta<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>*.js<span class="pl-pds">"</span></span>: {
+          <span class="pl-s"><span class="pl-pds">"</span>loader<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ts<span class="pl-pds">"</span></span>
+        }
+      }
+    }
+</pre></div>
+
+<p><strong>Production:</strong></p>
+
+<p>Run "jspm bundle-sfx src production.js"</p>
+
+<p>Then use 'production.js' file in index.html, instead of all those previews files.</p>
+
+<p>It has no dependency to any library, transpiler etc. and it is ECMA 5 based JavaScript file!</p>
+
+<p>You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.</p>
+
+<p><a href="http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-%E2%80%9Cjspm-transpilers-sample%E2%80%9D">Dedicated blog post about this repository, so you can write a comment there</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Fermium-co/jspm-transpilers-sample">Jspm-transpilers-sample</a> is maintained by <a href="https://github.com/Fermium-co">Fermium-co</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
