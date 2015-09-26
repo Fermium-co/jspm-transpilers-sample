@@ -97,3 +97,5 @@ Then use 'production.js' file in index.html, instead of all those previews files
 It has no dependency to any library, transpiler etc. and it is ECMA 5 based JavaScript file!
 
 You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.
+
+[Dedicated blog post about this repository, so you can write a comment there](http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-“jspm-transpilers-sample”)
