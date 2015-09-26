@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Fermium-co/jspm-typescript-sample/issues"
   },
-  "homepage": "https://github.com/Fermium-co/jspm-typescript-sample"
+  "homepage": "https://github.com/Fermium-co/jspm-typescript-sample",
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {}
+  }
 }
