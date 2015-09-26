@@ -1,12 +1,8 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "none",
-  paths: {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
-  },
-  typescriptOptions: { /* typescript options */
+  transpiler: "typescript",
+  typescriptOptions: {
     "noImplicitAny": false,
     "typeCheck": true,
     "experimentalDecorators": true,
@@ -15,19 +11,26 @@ System.config({
     "experimentalAsyncFunctions": true,
     "taget": "ES5"
   },
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
+  },
+
   packages: {
-    "src": { /* src folder */
-      "main": "index", /* index.ts file in src folder */
+    "src": {
+      "main": "index",
       "defaultExtension": "ts",
       "meta": {
         "*.ts": {
           "loader": "ts"
         }
       }
-    },
+    }
   },
+
   map: {
     "ts": "github:frankwallis/plugin-typescript@2.0.17",
+    "typescript": "npm:typescript@1.6.2",
     "github:frankwallis/plugin-typescript@2.0.17": {
       "typescript": "npm:typescript@1.6.2"
     }
