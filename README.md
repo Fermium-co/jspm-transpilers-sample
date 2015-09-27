@@ -32,7 +32,7 @@ So, let’s start!
 2.	Run “npm install jspm --save” to install JSPM locally.
 3.	Run “jspm init” Accept all default values, and choose typescript as a transpiler.
 4.	Run “jspm install ts” to add JSPM Typescript plugin.
-5.	Create a src folder and put index.ts into that. Then write these configs in your config.js file:
+5.	Create a src folder and create index.ts into that. Then write these configs in your config.js file:
 
 ```json
 typescriptOptions: {
@@ -72,7 +72,9 @@ To transpile ECMA 6 & 7 based JavaScript files:
 
 1. Create a new folder, for example 'ecmaSrc'
 
-2. Add following package into config.js:
+2. Create index.js in ecmaSrc folder
+
+3. Add following package into config.js:
 
 ```json
 
@@ -98,4 +100,4 @@ It has no dependency to any library, transpiler etc. and it is ECMA 5 based Java
 
 You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.
 
-[Dedicated blog post about this repository, so you can write a comment there](http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-“jspm-transpilers-sample”)
+[There is a dedicated blog post about this repository, so you can write your comments there](http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-“jspm-transpilers-sample”)
