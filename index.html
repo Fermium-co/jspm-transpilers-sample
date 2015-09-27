@@ -56,7 +56,7 @@
 <li> Run “npm install jspm --save” to install JSPM locally.</li>
 <li> Run “jspm init” Accept all default values, and choose typescript as a transpiler.</li>
 <li> Run “jspm install ts” to add JSPM Typescript plugin.</li>
-<li> Create a src folder and put index.ts into that. Then write these configs in your config.js file:</li>
+<li> Create a src folder and create index.ts into that. Then write these configs in your config.js file:</li>
 </ol>
 
 <div class="highlight highlight-source-json"><pre>typescriptOptions: {
@@ -99,12 +99,13 @@
 
 <ol>
 <li><p>Create a new folder, for example 'ecmaSrc'</p></li>
+<li><p>Create index.js in ecmaSrc folder</p></li>
 <li><p>Add following package into config.js:</p></li>
 </ol>
 
 <div class="highlight highlight-source-json"><pre>
     <span class="pl-s"><span class="pl-pds">"</span>ecmaSrc<span class="pl-pds">"</span></span>: { <span class="pl-ii">/*</span> <span class="pl-ii">ecmaSrc</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
-      <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">index.js</span> <span class="pl-ii">file</span> <span class="pl-ii">inside</span> <span class="pl-ii">src</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
+      <span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">index.js</span> <span class="pl-ii">file</span> <span class="pl-ii">inside</span> <span class="pl-ii">ecmaSrc</span> <span class="pl-ii">folder</span> <span class="pl-ii">*/</span>
       <span class="pl-s"><span class="pl-pds">"</span>defaultExtension<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>js<span class="pl-pds">"</span></span>, <span class="pl-ii">/*</span> <span class="pl-ii">.js</span> <span class="pl-ii">for</span> <span class="pl-ii">JavaScript</span> <span class="pl-ii">files</span> <span class="pl-ii">*/</span>
       <span class="pl-s"><span class="pl-pds">"</span>meta<span class="pl-pds">"</span></span>: {
         <span class="pl-s"><span class="pl-pds">"</span>*.js<span class="pl-pds">"</span></span>: {
@@ -124,7 +125,7 @@
 
 <p>You don't have to deploy your typescript file into production too, and using generated source maps, there is a debug option available to you, so you can debug your original Typescript codes using chrome dev tools etc.</p>
 
-<p><a href="http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-%E2%80%9Cjspm-transpilers-sample%E2%80%9D">Dedicated blog post about this repository, so you can write a comment there</a></p>
+<p><a href="http://fermium.co/post/75722936-4017-4f8a-9cbe-957079f35950/Tell-us-about-our-new-repository-%E2%80%9Cjspm-transpilers-sample%E2%80%9D">There is a dedicated blog post about this repository, so you can write your comments there</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Fermium-co/jspm-transpilers-sample">Jspm-transpilers-sample</a> is maintained by <a href="https://github.com/Fermium-co">Fermium-co</a>.</span>
